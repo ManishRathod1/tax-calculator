@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Calculator</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome icon library -->
+  <link rel="stylesheet" type="text/css" href="tax.css">
+</head>
+<body>
+  <div class="container">
+    <form id="taxCalculatorForm">
+      <div class="form-group">
+        <label for="annualIncome">Enter gross annual income:<i class="fas fa-question-circle info-icon" data-tooltip="This is your total annual income before any deductions" style="margin-right: 145px;"></i></label>
+        <input type="text" class="form-control" id="annualIncome" name="annualIncome" placeholder="Enter gross annual income">
+        <span class="error-icon" id="annualIncomeError" data-toggle="tooltip" title="Please enter number only"></span>
+      </div>
+      <div class="form-group">
+        <label for="extraIncome">Enter extra Income: <i class="fas fa-question-circle info-icon" data-tooltip="This is any additional income you receive"style="margin-right: 200px;"></i></label>
+        <input type="text" class="form-control" id="extraIncome" name="extraIncome" placeholder="Enter extra Income">
+        <span class="error-icon" id="extraIncomeError" data-toggle="tooltip" title="Please enter number only"></span>
+      </div>
+      <div class="form-group">
+        <label for="age">Age: <i class="fas fa-question-circle info-icon" data-tooltip="Your age determines the tax bracket" style="margin-right: 300px;"></i></label>
+        <select class="form-control" id="age" name="age" >
+          <option value="" selected disabled>Select Age</option>
+          <option value="<40">&lt; 40</option>
+          <option value=">=40&<60">&ge; 40 &lt; 60</option>
+          <option value=">=60">&ge; 60</option>
+        </select>
+        <span class="error-icon" id="ageError" data-toggle="tooltip" title=""></span>
+      </div>
+      <div class="form-group">
+        <label for="totalDeduction">Enter total Applicable Deduction: <i class="fas fa-question-circle info-icon" data-tooltip="This is the total amount of deductions you can claim" style="margin-right: 105px;"></i></label>
+        <input type="text" class="form-control" id="totalDeduction" name="totalDeduction" placeholder="Enter total Applicable Deduction">
+        <span class="error-icon" id="totalDeductionError" data-toggle="tooltip" title="Please enter number only"></span>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block" data-toggle="modal" data-target="#taxResultModal">Submit</button>
+    </form>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="taxResultModal" tabindex="-1" role="dialog" aria-labelledby="taxResultModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+          <h3  class="modal-title text-center w-100"  id="taxResultModalLabel">Your overall income will be</h3>
+          <div class="modal-body text-center">
+            <h5 id="taxResultText" class="text-center"></h5>
+            <p class="text-center">after tax deduction</p>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: blue; color: white;">Close</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="tax.js"></script>
+    </body>
+</html>
