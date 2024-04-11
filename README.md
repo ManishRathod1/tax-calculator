@@ -4,7 +4,7 @@ Here are some pr-validations:-
 2) All the fields should be entered:-
 ![validation two](https://github.com/ManishRathod1/tax-calculator/assets/70378381/c7862f63-49bb-40e1-aae5-36caf471ac48)
 3) When you Hover over the question it will give you the info:-
-![validation three](https://github.com/ManishRathod1/tax-calculator/assets/70378381/5247ed1a-a4fb-44a0-93fe-c3b778860353)![validation four]
+![validation three](https://github.com/ManishRathod1/tax-calculator/assets/70378381/5247ed1a-a4fb-44a0-93fe-c3b778860353)
 4) when you hover the red mark it will show the info what needs to be eneterd:-
 ![validation five](https://github.com/ManishRathod1/tax-calculator/assets/70378381/583387f8-d527-4d27-8ae5-8c7d991749fe)
 
